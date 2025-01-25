@@ -1,0 +1,317 @@
+{
+	"info": {
+		"_postman_id": "0eb37b5e-d308-473d-834a-9abb86750a86",
+		"name": "ClassRoom Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "34509068"
+	},
+	"item": [
+		{
+			"name": "STUDENT APIS",
+			"item": [
+				{
+					"name": "List Student's Assignments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlIjoic3R1ZGVudCIsInN0dWRlbnRfaWQiOjEsImVtYWlsIjoic3R1ZGVudDFAZXhhbXBsZS5jb20iLCJpYXQiOjE3Mzc3ODMzMDAsImV4cCI6MTczNzc4NjkwMH0.Z8IiziQoJ_zAld7UEO6r2CG8D1NmjaM7Tsit397t35o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"data\": [\r\n    {\r\n      \"id\": \"65a1b2c5d4a8f3e142b4a1d\",\r\n      \"content\": \"History Essay\",\r\n      \"state\": \"DRAFT\",\r\n      \"created_by\": \"student\"\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_URL}}/student/assignments"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Draft Assignment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlIjoic3R1ZGVudCIsInN0dWRlbnRfaWQiOjEsImVtYWlsIjoic3R1ZGVudDFAZXhhbXBsZS5jb20iLCJpYXQiOjE3Mzc3ODMzMDAsImV4cCI6MTczNzc4NjkwMH0.Z8IiziQoJ_zAld7UEO6r2CG8D1NmjaM7Tsit397t35o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"content\": \"My First Assignment\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_URL}}/student/assignments"
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Draft Assignment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlIjoic3R1ZGVudCIsInN0dWRlbnRfaWQiOjEsImVtYWlsIjoic3R1ZGVudDFAZXhhbXBsZS5jb20iLCJpYXQiOjE3Mzc3ODMzMDAsImV4cCI6MTczNzc4NjkwMH0.Z8IiziQoJ_zAld7UEO6r2CG8D1NmjaM7Tsit397t35o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":\"67947b3af6608a9c6f007f33\", \"content\":\"Updated Math Homework\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_URL}}/student/assignments"
+					},
+					"response": []
+				},
+				{
+					"name": "Submit Assignment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoyLCJyb2xlIjoic3R1ZGVudCIsInN0dWRlbnRfaWQiOjEsImVtYWlsIjoic3R1ZGVudDFAZXhhbXBsZS5jb20iLCJpYXQiOjE3Mzc3ODMzMDAsImV4cCI6MTczNzc4NjkwMH0.Z8IiziQoJ_zAld7UEO6r2CG8D1NmjaM7Tsit397t35o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"id\":\"67947b3af6608a9c6f007f33\", \"teacher_id\":1}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_URL}}/student/assignments/submit"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teacher APIs",
+			"item": [
+				{
+					"name": "List Assignments Submitted to Teacher",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoidGVhY2hlciIsInRlYWNoZXJfaWQiOjEsImVtYWlsIjoidGVhY2hlcjFAc2Nob29sLmNvbSIsImlhdCI6MTczNzc5ODc3NywiZXhwIjoxNzM3ODAyMzc3fQ.iPqeLxvKGoHzhXOMpRNwyF5-lwhxCJ6tNyN4nEexMIM",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/teacher/assignments",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"teacher",
+								"assignments"
+							],
+							"query": [
+								{
+									"key": "Authorization",
+									"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoidGVhY2hlciIsInRlYWNoZXJfaWQiOjEsImVtYWlsIjoidGVhY2hlcjFAc2Nob29sLmNvbSIsImlhdCI6MTczNzc4MTIyMSwiZXhwIjoxNzM3Nzg0ODIxfQ.eCf5O9CpVHTMR8AoVYP9XZYxOwL19Wh3FLveNTZcH_c",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Grade Assignment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoidGVhY2hlciIsInRlYWNoZXJfaWQiOjEsImVtYWlsIjoidGVhY2hlcjFAc2Nob29sLmNvbSIsImlhdCI6MTczNzc4MTIyMSwiZXhwIjoxNzM3Nzg0ODIxfQ.eCf5O9CpVHTMR8AoVYP9XZYxOwL19Wh3FLveNTZcH_c",
+								"type": "text"
+							}
+						],
+						"url": "{{BASE_URL}}/teacher/assignments/grade"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Assignment for Student",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJyb2xlIjoidGVhY2hlciIsInRlYWNoZXJfaWQiOjEsImVtYWlsIjoidGVhY2hlcjFAc2Nob29sLmNvbSIsImlhdCI6MTczNzc4MTIyMSwiZXhwIjoxNzM3Nzg0ODIxfQ.eCf5O9CpVHTMR8AoVYP9XZYxOwL19Wh3FLveNTZcH_c",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"student_id\": 1,\r\n  \"content\": \"Test Assignment\",\r\n  \"created_by\": \"teacher\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_URL}}/teacher/assignments"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Authentication APIs",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"student1@example.com\",\r\n  \"password\": \"student123\",\r\n  \"role\": \"student\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_URL}}/auth/register"
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n \"email\": \"teacher1@school.com\",\r\n  \"password\": \"teacher123\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_URL}}/auth/login"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Principal APIs",
+			"item": [
+				{
+					"name": "List All Teachers",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJyb2xlIjoicHJpbmNpcGFsIiwicHJpbmNpcGFsX2lkIjoxLCJlbWFpbCI6InByaW5jaXBsZTFAZXhhbXBsZS5jb20iLCJpYXQiOjE3Mzc4MjExOTksImV4cCI6MTczNzgyNDc5OX0.lPAykHJdrDrBxpOwq2039knx43T8cnIe3bitr9-NRXs",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BASE_URL}}/principal/teachers",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"principal",
+								"teachers"
+							],
+							"query": [
+								{
+									"key": "A",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List All Assignments",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJyb2xlIjoicHJpbmNpcGFsIiwicHJpbmNpcGFsX2lkIjoxLCJlbWFpbCI6InByaW5jaXBsZTFAZXhhbXBsZS5jb20iLCJpYXQiOjE3Mzc4MjExOTksImV4cCI6MTczNzgyNDc5OX0.lPAykHJdrDrBxpOwq2039knx43T8cnIe3bitr9-NRXs",
+								"type": "text"
+							}
+						],
+						"url": "{{BASE_URL}}/principal/assignments"
+					},
+					"response": []
+				},
+				{
+					"name": "Re-grade Assignment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJyb2xlIjoicHJpbmNpcGFsIiwicHJpbmNpcGFsX2lkIjoxLCJlbWFpbCI6InByaW5jaXBsZTFAZXhhbXBsZS5jb20iLCJpYXQiOjE3Mzc4MjExOTksImV4cCI6MTczNzgyNDc5OX0.lPAykHJdrDrBxpOwq2039knx43T8cnIe3bitr9-NRXs",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"assignment_id\": \"67947b3af6608a9c6f007f33\",\r\n  \"grade\": \"B\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BASE_URL}}/principal/assignments/grade"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
