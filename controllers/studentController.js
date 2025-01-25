@@ -1,6 +1,6 @@
 const Assignment = require('../models/Assignment');
 const { isValidObjectId } = require('mongoose');
-
+const User = require('../models/User');
 exports.listAssignments = async (req, res) => {
   try {
     // Get authenticated student ID from JWT
