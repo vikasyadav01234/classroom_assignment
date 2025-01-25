@@ -59,3 +59,4 @@ A RESTful API for managing school assignments with role-based access control (Pr
 4. Start the server:
     ```bash
     npm start
+All Apis and test points are in test Folder
