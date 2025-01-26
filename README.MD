@@ -62,4 +62,5 @@ A RESTful API for managing school assignments with role-based access control (Pr
 All Apis and test points are in test Folder
 
 Postman Collection Link
-https://class-room-apis.postman.co/workspace/Class-Room-apis-Workspace~ba84caba-7424-453e-a7dd-4d5104bc4a69/collection/34509068-0eb37b5e-d308-473d-834a-9abb86750a86?action=share&creator=34509068&active-environment=34509068-7db874d1-0fd0-48e2-b84b-dceb40bc8590
+
+[[Postman]](https://class-room-apis.postman.co/workspace/Class-Room-apis-Workspace~ba84caba-7424-453e-a7dd-4d5104bc4a69/collection/34509068-0eb37b5e-d308-473d-834a-9abb86750a86?action=share&creator=34509068&active-environment=34509068-7db874d1-0fd0-48e2-b84b-dceb40bc8590)
